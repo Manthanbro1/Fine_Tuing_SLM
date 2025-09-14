@@ -30,15 +30,17 @@ This project converts **raw resume text** into structured **JSON** using a small
 
 Project/
 │── dataset/
+<br>
 │── Scripts/
+<br>
 │ ├── prepare_data.py
+<br>
 │ ├── eval_fewshots_resume.py
+<br>
 │── results/
+<br>
 │ ├── fewshot_results.jsonl
-
-yaml
-Copy code
-
+<br>
 ---
 
 ## 🚀 Next Steps  
