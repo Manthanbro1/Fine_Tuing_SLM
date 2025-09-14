@@ -63,7 +63,34 @@ def run_fewshot(test_input):
 # Example run
 # --------------------------
 if __name__ == "__main__":
-    test_resume = "Aarav Patel here, a Project Manager at QuantumLeap for 8 yrs, proficient in Agile, Scrum, JIRA, and Team Leadership. aarav.p@inbox.com"
-    result = run_fewshot(test_resume)
-    print("\n=== FEW-SHOT RESULT ===")
-    print(result)
+    import os
+
+    test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_test.jsonl"
+    output_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_resume.jsonl"
+    os.makedirs("Results", exist_ok=True)
+
+    # Load test data
+    with open(test_path, "r", encoding="utf-8") as f:
+        test_data = [json.loads(line) for line in f]
+
+    # Run few-shot on all examples
+    results = []
+    for example in test_data:
+        pred = run_fewshot(example["input"])
+        try:
+            pred_json = json.loads(pred)
+        except json.JSONDecodeError:
+            pred_json = {"error": pred, "note": "invalid JSON"}  # fallback
+
+        results.append({
+            "input": example["input"],
+            "predicted": pred_json,
+            "target": example["output"]
+        })
+
+    # Save results
+    with open(output_path, "w", encoding="utf-8") as f:
+        for r in results:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+    print(f"Few-shot results saved to {output_path}")
