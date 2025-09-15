@@ -2,11 +2,17 @@ import json
 import random
 import os
 
-# Paths
-raw_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_raw.jsonl"
-train_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_train.jsonl"
-valid_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_valid.jsonl"
-test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_test.jsonl"
+# Paths for Resume
+# raw_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_raw.jsonl"
+# train_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_train.jsonl"
+# valid_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_valid.jsonl"
+# test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/resume_test.jsonl"
+""" You can uncomment the above lines and comment the below lines to use dataset you want to build """
+# Paths for Medical
+raw_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/medical_raw.jsonl"
+train_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/medical_train.jsonl"
+valid_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/medical_valid.jsonl"
+test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/medical_test.jsonl"
 
 # Read raw data
 with open(raw_path, "r", encoding="utf-8") as f:
