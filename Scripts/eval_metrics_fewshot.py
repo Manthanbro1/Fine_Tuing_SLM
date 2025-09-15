@@ -1,7 +1,7 @@
 import json
 import re
 
-RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_resume.jsonl"
+RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_medical.jsonl"
 
 
 def try_fix_json(bad_json_str):
