@@ -68,7 +68,7 @@ if __name__ == "__main__":
     You can change the names to resume_test.jsonl and fewshot_resume.jsonl to use resume dataset"""
 
 
-    test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/medical_test.jsonl"
+    test_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume/medical_test.jsonl"
     output_path = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_medical.jsonl"
     os.makedirs("Results", exist_ok=True)
 
