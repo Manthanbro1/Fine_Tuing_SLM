@@ -35,12 +35,12 @@ logger = logging.getLogger(__name__)
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--model_name", type=str, default="HuggingFaceTB/SmolLM2-360M-Instruct")
-    p.add_argument("--data_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume")
-    p.add_argument("--train_file", type=str, default="resume_LoRA_train.jsonl")
-    p.add_argument("--valid_file", type=str, default="resume_LoRA_valid.jsonl")
-    p.add_argument("--output_dir", type=str, default="Models/LoRA_resume")
+    p.add_argument("--data_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical")# You can Just Change to "Resume" for tuning instead of "Medical" or Vice-Versa
+    p.add_argument("--train_file", type=str, default="medical_LoRA_train.jsonl")# To use , Just change "medical" to "resume" or Vice-versa
+    p.add_argument("--valid_file", type=str, default="medical_LoRA_valid.jsonl")# To use , Just change "medical" to "resume" or Vice-versa
+    p.add_argument("--output_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Models/LoRA_medical")#"LoRA_medical" to "LoRA_resume" or Vice-versa
     p.add_argument("--max_length", type=int, default=512)
-    p.add_argument("--num_train_epochs", type=int, default=3)
+    p.add_argument("--num_train_epochs", type=int, default=1)
     p.add_argument("--per_device_train_batch_size", type=int, default=1)
     p.add_argument("--gradient_accumulation_steps", type=int, default=8)
     p.add_argument("--learning_rate", type=float, default=2e-4)
