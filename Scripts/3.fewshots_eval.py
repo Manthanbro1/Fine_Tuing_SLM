@@ -3,7 +3,7 @@ import re
 from Levenshtein import distance as levenshtein
 """You can change the path to results file to evaluate resume dataset
 instead of few_medical.jsonl dataset writing fewshot_resume.jsonl"""
-RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_medical.jsonl"
+RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_resume.jsonl"
 
 lev_dists = []
 def try_fix_json(bad_json_str):
