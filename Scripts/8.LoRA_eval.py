@@ -2,8 +2,8 @@ import json
 from Levenshtein import distance as levenshtein_distance
 
 # ------------------ CONFIG ------------------
-GOLD_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume/resume_LoRA_test.jsonl"
-PRED_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_resume_predictions.jsonl"
+GOLD_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical/medical_LoRA_test.jsonl"
+PRED_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_medical_predictions.jsonl"
 # -------------------------------------------
 
 def normalize_value(val):

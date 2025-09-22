@@ -7,9 +7,9 @@ from tqdm import tqdm
 
 # === CONFIG ===
 BASE_MODEL = "HuggingFaceTB/SmolLM2-360M-Instruct"   # same base model you used
-LORA_PATH = "E:/College/2nd Year/Sem 1/EDAI/Project/Models/LoRA_resume"   # trained LoRA adapter
-TEST_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume/resume_LoRA_test.jsonl"
-RESULT_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_resume_predictions.jsonl"
+LORA_PATH = "E:/College/2nd Year/Sem 1/EDAI/Project/Models/LoRA_medical"   # trained LoRA adapter
+TEST_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical/medical_LoRA_test.jsonl"
+RESULT_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_medical_predictions.jsonl"
 
 # === Load Model + LoRA ===
 print("Loading base model...")
