@@ -1,10 +1,11 @@
 import json
 import re
+from Levenshtein import distance as levenshtein
 """You can change the path to results file to evaluate resume dataset
 instead of few_medical.jsonl dataset writing fewshot_resume.jsonl"""
 RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_medical.jsonl"
 
-
+lev_dists = []
 def try_fix_json(bad_json_str):
     """Attempt to fix common JSON formatting issues"""
     if not bad_json_str or not isinstance(bad_json_str, str):
@@ -87,6 +88,12 @@ def evaluate():
     for field, correct in field_correct.items():
         print(
             f"{field.capitalize()} Accuracy: {correct / valid_preds:.2%}" if valid_preds else f"{field.capitalize()} Accuracy: N/A")
+    # --- Levenshtein ---
+    p_str = json.dumps(pred, sort_keys=True)
+    r_str = json.dumps(tgt_exp, sort_keys=True)
+    lev_dists.append(levenshtein(p_str, r_str))
+    if lev_dists:
+        print(f"Average Levenshtein Distance: {sum(lev_dists)/len(lev_dists):.2f}")
 
 
 if __name__ == "__main__":
