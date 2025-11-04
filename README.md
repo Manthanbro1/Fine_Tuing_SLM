@@ -55,27 +55,43 @@ The goal is to compare **baseline few-shot prompting** against **LoRA fine-tunin
 project/<br>
 │<br>
 ├─ Scripts/<br>
-│   ├─ 1.prepare_data.py            # Spilting Data into Valid,Train,Tes<br>
-│   ├─ 2.fewshots_train.py          # Fewshots Fine Tuning<br>
-│   ├─ eval\_LoRA\_resume.py        # Evaluation script for general resumes<br>
-│   ├─ eval\_LoRA\_medical.py       # Evaluation script for medical resumes<br>
-│   ├─ eval\_LoRA\_metrics.py       # Metrics calculation script<br>
+│    ├─[1.prepare_data.py](Scripts/1.prepare_data.py)
+│    ├─[2.fewshots_train.py](Scripts/2.fewshots_train.py)
+│    ├─[3.fewshots_eval.py](Scripts/3.fewshots_eval.py)
+│    ├─[4.convert_to_instruct.py](Scripts/4.convert_to_instruct.py)
+│    ├─[5.LoRA_train.py](Scripts/5.LoRA_train.py)
+│    ├─[6.testing_on_example.py](Scripts/6.testing_on_example.py)
+│    ├─[7.testing_on_dataset.py](Scripts/7.testing_on_dataset.py)
+│    ├─[8.LoRA_eval.py](Scripts/8.LoRA_eval.py)
 │<br>
 ├─ Data/<br>
-│   ├─ resume\_train.jsonl<br>
-│   ├─ resume\_valid.jsonl<br>
-│   ├─ resume\_test.jsonl<br>
-│   ├─ medical\_train.jsonl<br>
-│   ├─ medical\_valid.jsonl<br>
-│   └─ medical\_test.jsonl<br>
+[Data](Data)
+[Medical](Data/Medical)
+[medical_LoRA_test.jsonl](Data/Medical/medical_LoRA_test.jsonl)
+[medical_LoRA_train.jsonl](Data/Medical/medical_LoRA_train.jsonl)
+[medical_LoRA_valid.jsonl](Data/Medical/medical_LoRA_valid.jsonl)
+[medical_raw.jsonl](Data/Medical/medical_raw.jsonl)
+[medical_test.jsonl](Data/Medical/medical_test.jsonl)
+[medical_train.jsonl](Data/Medical/medical_train.jsonl)
+[medical_valid.jsonl](Data/Medical/medical_valid.jsonl)
+[Resume](Data/Resume)
+[resume_LoRA_test.jsonl](Data/Resume/resume_LoRA_test.jsonl)
+[resume_LoRA_train.jsonl](Data/Resume/resume_LoRA_train.jsonl)
+[resume_LoRA_valid.jsonl](Data/Resume/resume_LoRA_valid.jsonl)
+[resume_raw.jsonl](Data/Resume/resume_raw.jsonl)
+[resume_test.jsonl](Data/Resume/resume_test.jsonl)
+[resume_train.jsonl](Data/Resume/resume_train.jsonl)
+[resume_valid.jsonl](Data/Resume/resume_valid.jsonl)
 │<br>
 ├─ Models/<br>
-│   ├─ LoRA\_resume/               # Saved LoRA adapter for general resumes<br>
-│   └─ LoRA\_medical/              # Saved LoRA adapter for medical resumes<br>
+│   ├─ LoRA_resume/               # Saved LoRA adapter for general resumes<br>
+│   └─ LoRA_medical/              # Saved LoRA adapter for medical resumes<br>
 │<br>
 └─ Results/<br>
-├─ lora\_resume\_predictions.jsonl<br>
-└─ lora\_medical\_predictions.jsonl<br>
+[fewshot_medical.jsonl](Results/fewshot_medical.jsonl)
+[fewshot_resume.jsonl](Results/fewshot_resume.jsonl)
+[lora_medical_predictions.jsonl](Results/lora_medical_predictions.jsonl)
+[lora_resume_predictions.jsonl](Results/lora_resume_predictions.jsonl)
 
 ````
 
