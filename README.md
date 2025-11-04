@@ -1,10 +1,10 @@
-```
+
 # Resume Information Extraction using LoRA Fine-Tuning
 
 ## 📄 Project Overview
 This project focuses on **extracting structured information from resumes** using **LoRA fine-tuned language models**. The system takes unstructured text resumes and generates structured JSON outputs containing key information such as:
 
-- `name`  
+- `name`    
 - `email`  
 - `skills`  
 - `experience`  
@@ -50,13 +50,13 @@ The goal is to compare **baseline few-shot prompting** against **LoRA fine-tunin
 ---
 
 ## 📂 Project Structure
-```
+
 
 project/<br>
 │<br>
 ├─ Scripts/<br>
-│   ├─ train\_LoRA\_resume.py       # LoRA fine-tuning script for general resumes<br>
-│   ├─ train\_LoRA\_medical.py      # LoRA fine-tuning script for medical resumes<br>
+│   ├─ 1.prepare_data.py            # Spilting Data into Valid,Train,Tes<br>
+│   ├─ 2.fewshots_train.py          # Fewshots Fine Tuning<br>
 │   ├─ eval\_LoRA\_resume.py        # Evaluation script for general resumes<br>
 │   ├─ eval\_LoRA\_medical.py       # Evaluation script for medical resumes<br>
 │   ├─ eval\_LoRA\_metrics.py       # Metrics calculation script<br>

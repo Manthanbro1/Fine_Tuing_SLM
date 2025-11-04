@@ -29,9 +29,10 @@ def generate_resume_json(text, max_new_tokens=300):
     Generate structured JSON output from resume text.
     """
     prompt = f"""
+    you have 3 mins to solve this question make sure to extract the info properly, dont halucinate any info.
 Extract structured information from the resume below into JSON with keys:
-["name", "email", "skills", "experience"]
-
+["name" , "email" , "phone" , "Job" , "address" , "username" , "url" , "hobby" ]
+And Check Neatly for email and there can be sometimes null value for some keys if not found in the resume.
 Resume:
 {text}
 
@@ -54,9 +55,7 @@ Output JSON:
 if __name__ == "__main__":
     sample_resume = """
     John Doe
-    Email: john.doe@example.com
-    Skills: Python, Machine Learning, Data Analysis
-    Experience: Worked at ABC Corp as Data Scientist for 3 years.
+    My name is Aaliyah Popova, and I am a jeweler with 13 years of experience. I remember a very unique and challenging project I had to work on last year. A customer approached me with a precious family heirloom - a diamond necklace that had been passed down through generations. Unfortunately, the necklace was in poor condition, with several loose diamonds and a broken clasp. The customer wanted me to restore it to its former glory, but it was clear that this would be no ordinary repair. Using my specialized tools and techniques, I began the delicate task of dismantling the necklace. Each diamond was carefully removed from its setting, and the damaged clasp was removed. Once the necklace was completely disassembled, I meticulously cleaned each diamond and inspected it for any damage. Fortunately, the diamonds were all in good condition, with no cracks or chips. The next step was to repair the broken clasp. I carefully soldered the broken pieces back together, ensuring that the clasp was sturdy and secure. Once the clasp was repaired, I began the process of reassembling the necklace. Each diamond was carefully placed back into its setting, and the necklace was polished until it sparkled like new. When I presented the restored necklace to the customer, they were overjoyed. They couldn't believe that I had been able to bring their family heirloom back to life. The necklace looked as beautiful as it had when it was first created, and the customer was thrilled to have it back in their possession. If you have a project that you would like to discuss, please feel free to contact me by phone at (95) 94215-7906 or by email at aaliyah.popova4783@aol.edu. I look forward to hearing from you! P.S.: When I'm not creating beautiful jewelry, I enjoy spending time podcasting. I love sharing my knowledge about jewelry and connecting with other people who are passionate about this art form. I also enjoy spending time with my family and exploring new places. If you would like to learn more about me, please feel free to visit my website at [website address] or visit me at my studio located at 97 Lincoln Street.
     """
 
     result = generate_resume_json(sample_resume)
