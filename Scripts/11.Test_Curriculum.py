@@ -93,10 +93,10 @@ def generate_output(model, tokenizer, prompt, device, max_new_tokens=300):
 # ------------------------------------------------------------
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--adapter_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Models/Curriculum_LoRA_Resume/stage3",
+    parser.add_argument("--adapter_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Models/Curriculum_LoRA_Medical/stage3",
                         help="Directory containing LoRA adapter_model.safetensors")
-    parser.add_argument("--test_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume/resume_test.jsonl")
-    parser.add_argument("--output_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/curriculum_resume_prediction.jsonl")
+    parser.add_argument("--test_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical/medical_test.jsonl")
+    parser.add_argument("--output_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/curriculum_medical_prediction.jsonl")
     parser.add_argument("--max_new_tokens", type=int, default=300)
 
     args = parser.parse_args()

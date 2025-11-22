@@ -2,8 +2,8 @@ import json
 from Levenshtein import distance as levenshtein_distance
 
 # ------------------ CONFIG ------------------
-GOLD_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Resume/resume_LoRA_test.jsonl"
-PRED_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_resume_predictions.jsonl"
+GOLD_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical/medical_LoRA_test.jsonl"
+PRED_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/lora_medical_predictions.jsonl"
 # -------------------------------------------
 
 def normalize_value(val):
@@ -90,7 +90,7 @@ print(f"Experience Accuracy: {metrics['experience_accuracy']}%")
 print(f"Average Levenshtein Distance: {metrics['avg_levenshtein']}\n")
 
 
-# === LORA EVALUATION METRICS (with JSON Repair) ===
+# === LORA EVALUATION METRICS (with JSON Repair) === Resume
 # Total examples (with valid preds): 31
 # Exact Match Accuracy: 58.06%
 # Name Accuracy: 100.0%
@@ -98,3 +98,12 @@ print(f"Average Levenshtein Distance: {metrics['avg_levenshtein']}\n")
 # Skills Accuracy: 58.06%
 # Experience Accuracy: 58.06%
 # Average Levenshtein Distance: 34.65
+
+# === LORA EVALUATION METRICS (with JSON Repair) === Medical
+# Total examples (with valid preds): 30
+# Exact Match Accuracy: 46.67%
+# Name Accuracy: 100.0%
+# Email Accuracy: 96.67%
+# Skills Accuracy: 70.0%
+# Experience Accuracy: 73.33%
+# Average Levenshtein Distance: 4.4

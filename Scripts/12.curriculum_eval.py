@@ -306,7 +306,7 @@ def evaluate(preds_path):
 # -----------------------------
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--preds', type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/curriculum_resume_prediction.jsonl", help='Path to predictions JSONL')
+    parser.add_argument('--preds', type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/curriculum_medical_prediction.jsonl", help='Path to predictions JSONL')
     parser.add_argument('--out', type=str, required=False, help='Optional path to save metrics JSON')
     args = parser.parse_args()
 
@@ -325,7 +325,7 @@ if __name__ == '__main__':
             json.dump(metrics, f, ensure_ascii=False, indent=2)
         print(f"Saved metrics to {args.out}")
 
-# === Curriculum EVALUATION METRICS (with JSON Repair) ===
+# === Curriculum EVALUATION METRICS (with JSON Repair) === Resume
 # Total examples (with valid preds): 31
 # Exact Match Accuracy: 9.68%
 # Name Accuracy: 93.55%
@@ -333,3 +333,13 @@ if __name__ == '__main__':
 # Skills Accuracy: 54.84%
 # Experience Accuracy: 83.87%
 # Average Levenshtein Distance: 788.87
+
+
+# === Curriculum EVALUATION METRICS (with JSON Repair) === Medical
+# Total examples (with valid preds): 30
+# Exact Match Accuracy: 16.67%
+# Name Accuracy: 76.67%
+# Email Accuracy: 93.33%
+# Skills Accuracy: 46.67%
+# Experience Accuracy: 90.0%
+# Average Levenshtein Distance: 890.27

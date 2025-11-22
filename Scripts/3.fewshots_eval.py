@@ -3,7 +3,7 @@ import re
 from Levenshtein import distance as levenshtein
 """You can change the path to results file to evaluate resume dataset
 instead of few_medical.jsonl dataset writing fewshot_resume.jsonl"""
-RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_resume.jsonl"
+RESULTS_FILE = "E:/College/2nd Year/Sem 1/EDAI/Project/Results/fewshot_medical.jsonl"
 
 lev_dists = []
 def try_fix_json(bad_json_str):
@@ -99,7 +99,7 @@ def evaluate():
 if __name__ == "__main__":
     evaluate()
 
-# === FEWSHOT EVALUATION METRICS (with JSON Repair) ===
+# === FEWSHOT EVALUATION METRICS (with JSON Repair) === Resume
 # Total examples (with valid preds): 12
 # Exact Match Accuracy: 0.00%
 # Name Accuracy: 91.67%
@@ -107,3 +107,12 @@ if __name__ == "__main__":
 # Skills Accuracy: 8.33%
 # Experience Accuracy: 16.67%
 # Average Levenshtein Distance: 70.00
+
+# === FEWSHOT EVALUATION METRICS (with JSON Repair) === Medical
+# Total examples (with valid preds): 17
+# Exact Match Accuracy: 0.00%
+# Name Accuracy: 94.12%
+# Email Accuracy: 76.47%
+# Skills Accuracy: 11.76%
+# Experience Accuracy: 17.65%
+# Average Levenshtein Distance: 354.00
