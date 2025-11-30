@@ -1,0 +1,10 @@
+{
+    "Total Samples": 31,
+    "JSON Validity % (post-repair detection)": 22.58,
+    "Exact Match %": 35.48,
+    "Name Accuracy %": 96.77,
+    "Email Accuracy %": 96.77,
+    "Skills Accuracy %": 70.97,
+    "Experience Accuracy %": 48.39,
+    "Avg Levenshtein Distance (approx)": 37.06
+}
