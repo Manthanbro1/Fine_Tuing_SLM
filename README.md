@@ -334,7 +334,7 @@ This project demonstrates a full pipeline of **SLM training**, **augmentation**,
 
 # 👨‍💻 Author
 
-**Manthan**
+**Manthan, Foram, Pragati, Om, Sanskar**
 
 Artificial Intelligence & Data Science
 VIT Pune
