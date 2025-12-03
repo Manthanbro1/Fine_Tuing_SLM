@@ -1,18 +1,8 @@
-# hybrid_rerank.py
+# hybrid.py
 """
 Hybrid Rerank (ERR) - Ensemble + Repair + Rerank
 Fast, robust, schema-aware reranking for Resume/Medical datasets.
 
-Usage:
-    python Scripts/hybrid_rerank.py --base_model HuggingFaceTB/SmolLM2-360M-Instruct \
-        --model_dir Models/Curriculum_LoRA_Resume/stage3 \
-        --test_file Data/Resume/resume_test.jsonl \
-        --out_file Results/hybrid_rerank_resume.jsonl
-
-Important params:
- - --num_beams (default 4)
- - --num_return_sequences (default 4)
- - --max_new_tokens (default 64)
 """
 
 import argparse, json, re
@@ -266,9 +256,9 @@ if __name__ == "__main__":
     parser.add_argument("--base_model", type=str, default="HuggingFaceTB/SmolLM2-360M-Instruct")
     parser.add_argument("--model_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Models/Curriculum_LoRA_Medical/stage3",
                         help="Directory of Curriculum LoRA adapter (Peft saved adapter path).")
-    parser.add_argument("--test_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Data/Medical/medical_test.jsonl")
+    parser.add_argument("--test_file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Example.jsonl")
     parser.add_argument("--output_dir", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results")
-    parser.add_argument("--out-file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/hybrid_Pred_Medical_Final.jsonl")
+    parser.add_argument("--out-file", type=str, default="E:/College/2nd Year/Sem 1/EDAI/Project/Results/hybrid_Pred_Medical_Example.jsonl")
     parser.add_argument("--batch_size", type=int, default=2)
     parser.add_argument("--num_beams", type=int, default=2)
     parser.add_argument("--num_return_sequences", type=int, default=2)
