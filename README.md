@@ -1,22 +1,3 @@
-Absolutely — here is an expanded, **theory-rich, academically strong**, and **cleanly structured README** that gives deeper explanations of all **6 methods**, written professionally so you can use it directly for GitHub or academic submission.
-
-This version includes:
-
-✔ Concepts
-✔ Why the method is useful
-✔ When it fails
-✔ Why accuracy behaves the way it does
-✔ How each method improves model behavior
-
-Everything in one polished README.
-
----
-
-# ✅ **README.md (Expanded Theory Version — Final)**
-
-Copy–paste this entire block into your repo:
-
-````markdown
 # Fine-Tuning SLMs for JSON Extraction (Resume + Medical Information Extraction)
 ### Comparative Study of Six Training & Decoding Techniques using SmolLM2-360M
 
@@ -39,10 +20,10 @@ The model is expected to produce JSON of the form:
   "email": "...",
   "skills": ["..."],
   "experience": [
-    {"company": "...", "role": "...", "years": ...}
+    {"company": "...", "role": "...", "years": 0.0}
   ]
 }
-````
+```
 
 All experiments are done on **low compute (CPU-only)**, making this a practical pipeline for small models and limited hardware environments.
 
@@ -318,23 +299,23 @@ This is your **best-performing method** overall.
 ## Resume Dataset
 
 ```
-Fewshot:        EM 0.00 | Skills 8.33  | Exp 16.67 | Lev 70.00
-LoRA:           EM 58.06 | Skills 58.06 | Exp 58.06 | Lev 34.65
-Curriculum:     EM 9.68  | Skills 54.84 | Exp 83.87 | Lev 788.87
-Constraint:     EM 9.68  | Skills 74.19 | Exp 83.87 | Lev 44.29
-Synthetic LoRA: EM 35.48 | Skills 70.97 | Exp 48.39 | Lev 37.06
-Hybrid:         EM 48.39 | Skills 77.42 | Exp 74.19 | Lev 19.10
+Fewshot:        EM 0.00  | Name 91.67 | Email 50    | Skills 8.33  | Exp 16.67 | Lev 70.00
+LoRA:           EM 58.06 | Name 100   | Email 90.32 | Skills 58.06 | Exp 58.06 | Lev 34.65
+Curriculum:     EM 9.68  | Name 93.55 | Email 96.77 | Skills 54.84 | Exp 83.87 | Lev 788.87
+Constraint:     EM 9.68  | Name 93.55 | Email 96.77 | Skills 74.19 | Exp 83.87 | Lev 44.29
+Synthetic LoRA: EM 35.48 | Name 96.77 | Email 96.77 | Skills 70.97 | Exp 48.39 | Lev 37.06
+Hybrid:         EM 48.39 | Name 90.32 | Email 93.55 | Skills 77.42 | Exp 74.19 | Lev 19.10
 ```
 
 ## Medical Dataset
 
 ```
-Fewshot:        EM 0.00 | Skills 11.76 | Exp 17.65 | Lev 354.00
-LoRA:           EM 46.67 | Skills 70.00 | Exp 73.33 | Lev 4.40
-Curriculum:     EM 16.67 | Skills 46.67 | Exp 90.00 | Lev 890.27
-Constraint:     EM 16.67 | Skills 70.00 | Exp 90.00 | Lev 44.80
-Synthetic LoRA: EM 10.00 | Skills 33.33 | Exp 56.67 | Lev 43.27
-Hybrid:         EM 43.33 | Skills 70.00 | Exp 76.67 | Lev 27.17
+Fewshot:        EM 0.00  | Name 94.12 | Email 76.47 | Skills 11.76 | Exp 17.65 | Lev 354.00
+LoRA:           EM 46.67 | Name 100   | Email 96.67 | Skills 70.00 | Exp 73.33 | Lev 4.40
+Curriculum:     EM 16.67 | Name 76.67 | Email 93.33 | Skills 46.67 | Exp 90.00 | Lev 890.27
+Constraint:     EM 16.67 | Name 76.67 | Email 93.33 | Skills 70.00 | Exp 90.00 | Lev 44.80
+Synthetic LoRA: EM 10.00 | Name 100   | Email 100   | Skills 33.33 | Exp 56.67 | Lev 43.27
+Hybrid:         EM 43.33 | Name 80    | Email 86.67 | Skills 76.67 | Exp 76.67 | Lev 27.17
 ```
 
 ---
@@ -354,21 +335,7 @@ This project demonstrates a full pipeline of **SLM training**, **augmentation**,
 # 👨‍💻 Author
 
 **Manthan**
+
 Artificial Intelligence & Data Science
 VIT Pune
 
-```
-
----
-
-# 🚀 Your README is now **research-grade**, **industry-quality**, and explains every method clearly and deeply.  
-
-If you want, I can also generate:
-
-✅ A full **final project PDF report**  
-✅ **Graphs and comparison charts**  
-✅ A **PowerPoint presentation**  
-✅ A **method comparison diagram**  
-
-
-```
